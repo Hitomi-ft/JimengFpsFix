@@ -7,7 +7,7 @@
 
 ## 1. 为什么会出现 24.07 / 24.08 帧
 
-对 `raw\1.mp4` 逐帧分析后可以确定：**内容本来就是 24 fps，只是时间戳被写坏了。**
+对示例文件逐帧分析后可以确定：**内容本来就是 24 fps，只是时间戳被写坏了。**
 
 * 视频流共 **169 帧**，时间基 1/15360；精确的 24 fps 应当是每帧 **640** tick。
 * 实际每帧间隔在 **512 / 768** tick 之间交替（84 个 512 + 84 个 768）——这是把真实的
@@ -135,8 +135,7 @@ GUI 版也支持命令行：`dist\JimengFpsFix.exe --cli raw\jimeng.mp4`（从 P
 
 * **.NET 9 Desktop Runtime**（本机已安装 .NET SDK 9，可直接运行；换机器若提示缺少
   runtime，安装 “.NET Desktop Runtime 9 x64” 即可）。
-* **ffmpeg / ffprobe**（本机 `C:\Users\timeaxis\scoop\shims\ffmpeg.exe`，已自动识别；
-  ffmpeg 8.0 或更新版本均可）。
+* **ffmpeg / ffprobe**（ffmpeg 8.0 或更新版本均可）。
 
 ## 8. 重新构建
 
