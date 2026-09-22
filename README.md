@@ -60,9 +60,6 @@ dist\fpsfix.exe         命令行版（批量脚本 / 以后做流水线用）
 dist\使用说明.txt        放在 exe 旁边的快速说明
 src\                    源代码（C# / .NET 9 WinForms，无第三方依赖）
 build.ps1               重新构建
-raw\1.mp4               原始样本（169 帧，24.0855 fps）
-raw\2.mp4   raw\3.mp4   原始样本（各 193 帧，24.0748 fps）
-raw\fixed\*_24fps.mp4   已修复结果（精确 24.000 fps，音频比特级一致）
 ```
 
 ## 4. 使用方法（图形界面）
