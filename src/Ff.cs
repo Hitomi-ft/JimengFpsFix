@@ -107,6 +107,10 @@ public static class Ff
             CreateNoWindow = true,
             RedirectStandardOutput = true,
             RedirectStandardError = true,
+            // ffmpeg/ffprobe 在管道里一律输出 UTF-8；不指定就会按系统 ANSI(GBK) 解码，
+            // 中文路径 / 中文元数据 / 中文错误信息会变成乱码
+            StandardOutputEncoding = Encoding.UTF8,
+            StandardErrorEncoding = Encoding.UTF8,
         };
         foreach (var a in args) psi.ArgumentList.Add(a);
 
